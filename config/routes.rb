@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'people', to: 'people#index'
   get 'people/input'
   get 'people/:id', to: 'people#detail'
+  post 'people/create'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

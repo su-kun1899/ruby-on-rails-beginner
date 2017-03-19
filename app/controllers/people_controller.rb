@@ -13,4 +13,8 @@ class PeopleController < ApplicationController
     @msg = 'Add new data.'
     @person = Person.new
   end
+
+  def create
+    redirect_to '/people'
+  end
 end
