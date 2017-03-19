@@ -3,4 +3,8 @@ class PeopleController < ApplicationController
     @msg = 'Person data.'
     @people = Person.all
   end
+
+  def detail
+    @msg = 'Indexed data.'
+  end
 end
