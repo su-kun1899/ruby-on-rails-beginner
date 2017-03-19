@@ -53,6 +53,8 @@ Things you may want to cover:
    1. `app/controllers/people_controller.rb`
 1. Viewの修正
    1. `app/views/people/index.html.erb`
+1. スタイルの変更
+   1. `app/assets/stylesheets/people.scss`
 
 ## sqlite3
 
