@@ -15,7 +15,9 @@ class PeopleController < ApplicationController
   end
 
   def create
+    # noinspection RubyResolve
     Person.create(params.require(:person).permit(:name, :age, :mail))
+    # noinspection RubyResolve
     redirect_to '/people'
   end
 end
