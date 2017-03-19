@@ -5,15 +5,11 @@
     <tr>
       <th>Id</th>
       <th>Name</th>
-      <th>Age</th>
-      <th>Mail</th>
     </tr>
     <% @people.each do |person| %>
     <tr>
       <td><%= person.id %></td>
-      <td><%= person.name %></td>
-      <td><%= person.age %></td>
-      <td><%= person.mail %></td>
+      <td><a href="/people/<%= person.id %>"><%= person.name %></a></td>
     </tr>
     <% end %>
   </table>
