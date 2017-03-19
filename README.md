@@ -52,5 +52,5 @@ Things you may want to cover:
 
 ## sqlite3
 
-終了:
+終了:  
 `.exit`
