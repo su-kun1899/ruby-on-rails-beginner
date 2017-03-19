@@ -8,4 +8,9 @@ class PeopleController < ApplicationController
     @msg = 'Indexed data.'
     @person = Person.find(params[:id])
   end
+
+  def input
+    @msg = 'Add new data.'
+    @person = Person.new
+  end
 end
