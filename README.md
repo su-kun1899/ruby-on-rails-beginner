@@ -49,6 +49,10 @@ Things you may want to cover:
 1. ルーティングの設定
    1. `config/routes.rb`
    1. `get 'people', 'people#index'`
+1. コントローラの修正
+   1. `app/controllers/people_controller.rb`
+1. Viewの修正
+   1. `app/views/people/index.html.erb`
 
 ## sqlite3
 
