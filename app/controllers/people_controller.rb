@@ -15,6 +15,7 @@ class PeopleController < ApplicationController
   end
 
   def create
+    Person.create(params.require(:person).permit(:name, :age, :mail))
     redirect_to '/people'
   end
 end
