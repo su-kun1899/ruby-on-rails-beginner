@@ -33,4 +33,11 @@ class PeopleController < ApplicationController
     # noinspection RubyResolve
     redirect_to '/people'
   end
+
+  def delete
+    person = Person.find(params[:id])
+    person.destroy
+    # noinspection RubyResolve
+    redirect_to '/people'
+  end
 end

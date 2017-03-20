@@ -5,14 +5,25 @@
     <tr>
       <th>Id</th>
       <th>Name</th>
-      <th></th>
+      <th colspan="2"></th>
     </tr>
     <% @people.each do |person| %>
     <tr>
       <td><%= person.id %></td>
       <td><a href="/people/<%= person.id %>"><%= person.name %></a></td>
       <td><a href="/people/edit/<%= person.id %>">Edit</a></td>
+      <td><a href="javascript:deletePerson(<%= person.id %>);">Delete</a></td>
     </tr>
     <% end %>
   </table>
 </pre>
+
+<!--suppress JSUnusedLocalSymbols -->
+<script>
+  function deletePerson(targetId) {
+    if(confirm('このデータを削除しますか？')){
+      document.location = '/people/delete/' + targetId;
+    }
+    return false;
+  }
+</script>
