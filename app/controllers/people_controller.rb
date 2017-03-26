@@ -46,5 +46,10 @@ class PeopleController < ApplicationController
   def search
     @msg = 'please type search word...'
     @people = Array.new
+    # noinspection RubyResolve
+    if request.post?
+      obj = Person.find params['find']
+      @people.push obj
+    end
   end
 end

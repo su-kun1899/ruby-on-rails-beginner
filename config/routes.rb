@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'people/search'
   get 'people/:id', to: 'people#detail'
   post 'people/create'
+  post 'people/search'
   patch 'people/edit/:id', to: 'people#update'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

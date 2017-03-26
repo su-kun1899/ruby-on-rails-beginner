@@ -1,6 +1,24 @@
 <h1>People#Search</h1>
 <p><%= @msg %></p>
 <table>
+  <%= # noinspection RubyResolve
+      form_tag(controller: 'people', action: 'search') do %>
+      <tr>
+        <th>FIND</th>
+        <td><%= # noinspection RubyResolve
+                text_field_tag('find') %></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td><%= # noinspection RubyResolve
+                submit_tag('Click') %></td>
+      </tr>
+  <% end %>
+</table>
+
+<hr>
+
+<table>
   <tr>
     <th>Id</th>
     <th>Name</th>
