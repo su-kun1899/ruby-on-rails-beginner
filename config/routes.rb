@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'people/input'
   get 'people/edit/:id', to: 'people#edit'
   get 'people/delete/:id', to: 'people#delete'
+  get 'people/search'
   get 'people/:id', to: 'people#detail'
   post 'people/create'
   patch 'people/edit/:id', to: 'people#update'

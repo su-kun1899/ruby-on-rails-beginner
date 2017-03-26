@@ -42,4 +42,9 @@ class PeopleController < ApplicationController
     # noinspection RubyResolve
     redirect_to '/people'
   end
+
+  def search
+    @msg = 'please type search word...'
+    @people = Array.new
+  end
 end
