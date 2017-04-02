@@ -22,10 +22,15 @@ class PeopleController < ApplicationController
   end
 
   def create
-    # noinspection RubyResolve
-    Person.create(params.require(:person).permit(:name, :age, :mail))
-    # noinspection RubyResolve
-    redirect_to '/people'
+    @person = Person.new params.require(:person).permit(:name, :age, :mail)
+
+    if @person.save
+      # noinspection RubyResolve
+      redirect_to '/people'
+    else
+      @msg = '入力に問題があります。'
+      render 'input'
+    end
   end
 
   def update
