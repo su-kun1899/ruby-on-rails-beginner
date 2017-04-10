@@ -1,5 +1,12 @@
 <h1>People#input</h1>
 <p><%= @msg %></p>
+<% if @person.errors.any? %>
+    <ul>
+      <% @person.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+      <% end %>
+    </ul>
+<% end %>
 <pre>
   <table>
     <%= form_for(@person, url: {contoller: 'people', action: 'create'}) do |form| %>

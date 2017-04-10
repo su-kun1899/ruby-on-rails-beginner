@@ -28,13 +28,6 @@ class PeopleController < ApplicationController
       # noinspection RubyResolve
       redirect_to '/people'
     else
-      error_message = ''
-      @person.errors.messages.each do |key, values|
-        values.each do |value|
-          error_message += '<span style="color:red">' + key.to_s + '</span> ' + value + '<br>'
-        end
-      end
-      @msg = error_message.html_safe
       render 'input'
     end
   end
