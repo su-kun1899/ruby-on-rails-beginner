@@ -1,3 +1,27 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+  color: darkgray;
+  font-size: 28pt;
+  margin: 0 0 30px 0;
+}
+
+table tr th {
+  background: #909090;
+  color: #f6f6f6;
+  padding: 10px;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+table tr td {
+  background: #f6f6f6;
+  color: #606060;
+  padding: 5px 10px;
+  font-size: 14pt;
+}
+
+p.link {
+  margin: 30px 0 20px 0;
+}
