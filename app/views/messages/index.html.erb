@@ -1,2 +1,27 @@
 <h1>Messages#index</h1>
-<p>Find me in app/views/messages/index.html.erb</p>
+<p><%= @msg %></p>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>title</th>
+    <th>person</th>
+    <th colspan="2"></th>
+  </tr>
+  <% @data.each do |obj| %>
+      <tr>
+        <td><%= obj.id %></td>
+        <td><a href="/messages/<%= obj.id %>"><%= obj.title %></a></td>
+        <td><%= obj.person_id %></td>
+        <td><a href="/messages/edit/<%= obj.id %>">Edit</a></td>
+        <td><a href="javascript:delData(<%= obj.id %>);">Delete</a></td>
+      </tr>
+  <% end %>
+</table>
+<script>
+  function delData(num) {
+    if (confirm('このデータを削除しますか？')) {
+      document.location = "/messages/delete/" + num;
+    }
+    return false;
+  }
+</script>
