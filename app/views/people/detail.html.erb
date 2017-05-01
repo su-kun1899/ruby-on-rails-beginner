@@ -20,7 +20,13 @@
     </tr>
     <tr>
       <th>Message</th>
-      <td><%= @person.message != nil ? @person.message.title : 'none' %></td>
+      <td>
+        <% if @person.message != nil then %>
+          <% @person.message.each do |obj| %>
+            <%= '「'+ obj.title + '」' %>
+            <% end %>
+        <% end %>
+      </td>
     </tr>
   </table>
 </pre>
