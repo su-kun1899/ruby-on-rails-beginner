@@ -18,5 +18,9 @@
       <th>Mail</th>
       <td><%= @person.mail %></td>
     </tr>
+    <tr>
+      <th>Message</th>
+      <td><%= @person.message != nil ? @person.message.title : 'none' %></td>
+    </tr>
   </table>
 </pre>
