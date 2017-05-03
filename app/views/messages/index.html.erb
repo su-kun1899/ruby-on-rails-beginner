@@ -11,7 +11,7 @@
       <tr>
         <td><%= obj.id %></td>
         <td><a href="/messages/<%= obj.id %>"><%= obj.title %></a></td>
-        <td><%= obj.person_id %></td>
+        <td><%= obj.person.name %></td>
         <td><a href="/messages/edit/<%= obj.id %>">Edit</a></td>
         <td><a href="javascript:delData(<%= obj.id %>);">Delete</a></td>
       </tr>
